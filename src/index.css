@@ -1,13 +1,127 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./helvetica-255/Helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    /* font-family: 'Helvetica', sans-serif; */
+}
+
+.under-bar {
+    display: none;
+    position: absolute;
+}
+.navbar-link {
+    position: relative;
+    transition: all ease 200ms;
+}
+.navbar-link:hover a {
+    color: black;
+}
+.navbar-link:hover .under-bar {
+    display: block;
+    
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-bottom: 80px solid white; /* Adjust the color as needed */
+    transform: rotate(180deg);
+}
+
+.explore-product-btn {
+   border-radius: 6px;
+   transition: all 0.9s ease;
+   border: 1px solid #d81220;
+
+}
+
+.explore-product-btn:hover {
+
+    background-color: white;
+    color: #d81220;
+    border: 1px solid #d81220;
+}
+
+.outlined-text {
+    font-size: 80px; /* Adjust the font size as needed */
+    color: transparent; /* Make the text itself transparent */
+    background-color: transparent; /* Make the background transparent */
+    -webkit-text-stroke: 2px white; /* Apply the white border */
+    position: relative;
+    
+}
+
+.outlined-text::before {
+    content: attr(data-text); /* Use the text content */
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white; /* Fallback color for older browsers */
+    z-index: -1;
+    -webkit-text-stroke: 0;
+  
+}
+
+@media only screen and (max-width: 600px) {
+    .outlined-text {
+        font-size: 40px;
+    }
+}
+.featured-card {
+    transition: all ease-out 500ms;
+}
+
+.featured-card:hover {
+    background-color: black;
+    transform-origin: top;
+}
+
+.featured-card:hover p {
+    color: white;
+}
+.featured-card:hover .featured-card-h2 {
+    color: white;
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #d81220; /* Change the color as needed */
+}
+.trusted-card {
+    transition: all ease-in 300ms;
+}
+
+.bottom-bar {
+    display: none;
+    transition: all ease-in 300ms;
+}
+.trusted-card:hover .bottom-bar {
+display: block;
+transition: all ease-in 300ms;
+}
+.next {
+    color: white;
+}
+
+.next:hover {
+    background-color: white;
+    color: #d81220;
 }

@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+.card {
+  position: relative;
+  
+  
+  overflow: hidden;
+  background-color: #fff; /* Default background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+.card:hover p, .card:hover .featured-card-h2  {
+color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000; /* Color to show on hover, adjust opacity if needed */
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: -1; /* Ensures it is behind the card content */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card:hover::before {
+  transform: translateY(0);
+}
+
+.card-content {
+  position: relative;
+  z-index: 1; /* Ensures content is above the pseudo-element */
+  padding: 20px;
+}
+
+.wrapper {
+background-color: transparent;
+margin-bottom: 0px;
+overflow: hidden;
+border-bottom: 1px solid #e2e6ea;
+}
+.wrapper.about {
+background-color: white;
+box-shadow: 2px 2px 10 0 #0000001a !important;
+}
+.wrapper .question-container {
+width: 100%;
+text-align: left;
+padding: 20px 0px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+font-weight: 400;
+font-size: 16px;
+background: transparent;
+border: none;
+cursor: pointer;
+color: #d81220;
+}
+.wrapper.about .question-container {
+padding: 20px 20px;
+}
+.question-container.active {
+  
+/* background-image: linear-gradient(90deg,transparent,rgba(0,0,0,0.04),transparent); */
+}
+/* .wrapper .question-container:hover{
+background-image: linear-gradient(90deg,transparent,rgba(0,0,0,0.04),transparent);
+} */
+.wrapper .arrow {
+font-size: 2rem;
+transition: 0.5s ease-in-out;
+}
+.arrow.active {
+rotate: 180deg;
+color: #d81220;
+}
+.wrapper .answer-container {
+padding: 0;
+transition: height 0.4s ease-in-out;
+}
+
+.wrapper .answer-content {
+padding-bottom: 10px;
+font-size: 14px;
+}
+
+.all-dot {
+  width: 40%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+margin-top: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.dot {
+  width: 20%;
+  height: 10px;
+  background: #ffffff;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.active-dot {
+  background: #d81220;
+}
+
+/* src/Counter.css */
+
+.counter {
+  font-weight: bold;
+  color: #d81220;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.counter.in-view {
+  color: #4CAF50; /* Color change when in view */
+}
+
+.jg-border-right {
+  border-right: 1px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+  .jg-border-right {
+    border-right: 0;
+  border-bottom: 1px solid black;
   }
 }
