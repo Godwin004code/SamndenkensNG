@@ -6,6 +6,7 @@ import AboutPage from './components/AboutPage/AboutPage';
 import ContactPage from './components/contact/ContactPage';
 import ProjectPage from './components/Projects/ProjectPage';
 import ProfilePage from './components/Profile/ProfilePage';
+import RequestQuote from './components/RequestQuote/RequestQuote';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/contact" element={<ContactPage />} />
       <Route path='/projects' element={<ProjectPage />} />
       <Route path='/profile' element={<ProfilePage />} />
+      <Route path='/request-quote' element={<RequestQuote />} />
     </Routes>
     </BrowserRouter>
   );

@@ -4,7 +4,7 @@ import {FaChevronRight} from "react-icons/fa6";
 
 const MadeInNigeria = () => {
   return (
-    <div className='w-[80%] sm:w-[90%] mx-auto mt-40 sm:mt-16 mb-24'>
+    <div className='w-[80%] hidden sm:w-[90%] mx-auto mt-40 sm:mt-16 mb-24'>
         <h2 className='uppercase text-[#d81220] font-semibold  mb-4'>Made In Nigeria</h2>
         <section className='flex sm:flex-col justify-between'>
           <div>

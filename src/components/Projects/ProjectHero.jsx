@@ -4,14 +4,14 @@ import Typical from 'react-typical'
 
 const ProjectHero = () => {
   return (
-    <div className='h-[80vh]'>
+    <div className='h-[50vh]'>
     <div className='h-full relative'>
 <img src={img} alt="about us" className='h-[100%] w-full' />
 <div className='bg-[#000000b3] absolute w-full h-full top-0 flex flex-col justify-center bottom-0'>
 
 <div className='w-[50%] sm:w-[90%] sm:pl-4 pl-24'>
 <h2 className='text-white outlined-text leading-[80px] mt-[0px]'> <Typical
-    steps={['OUR PROJECTS', 5000]}
+    steps={['OUR SERVICES', 5000]}
     loop={Infinity}
    
   /></h2>

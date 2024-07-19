@@ -1,7 +1,7 @@
 
 import React, {useRef, useEffect, useState} from 'react'
 import {motion, useInView} from "framer-motion"
-import img from "../../images/oil-wells.jpeg"
+import img from "../../images/SAMDENKINS WEBSITE.png"
 
 const About = () => {
   const sectionVariants = {
@@ -104,12 +104,22 @@ const About = () => {
        <div  className='w-[50%] lg:w-full lg:h-auto flex justify-between flex-col'>
        <Text>
             <div>
-            <h2 className='text-[#d81220] font-semibold'>MESSAGE FROM FOUNDER + CEO</h2>
-            <h2 className='text-4xl sm:text-3xl mt-6'>Welcome To <span className='font-semibold'>Samdenkens Oil & Gas</span></h2>
-            <p className=' mt-5'>but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-            <p  className=' mt-4'>but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            <h2 className='text-[#d81220]  font-semibold'>CEO WELCOME MESSAGE</h2>
+            <h2 className='text-4xl hidden sm:text-3xl mt-6'>Our Mission</h2>
+            <p className=' mt-5'>Welcome to SamDenkins,</p>
+            <p className=' mt-5'>At SamDenkins, we provide advanced equipment and innovative solutions for
+the oil and gas industry, with a focus on excellence, safety, and sustainability.</p>
+<p className=' mt-5'>
+Our high-quality products, including drilling rigs and automation systems, meet
+top safety standards. We support optimal performance with comprehensive
+training.</p>
+<p className=' mt-5'>
+Explore our offerings to see how we can support your operations.</p>
+
+            <p  className=' mt-4'></p>
+            <h2 className='text-4xl  sm:text-3xl mt-6'>Enohor Deniran</h2>
             </div>
-            <button className='bg-[#d81220] text-white px-4 py-5 mt-10 explore-product-btn  max-w-[200px]'>CONTACT US</button>
+            <button className='bg-[#d81220] text-white px-4 py-5 mt-6 explore-product-btn  max-w-[200px]'>CONTACT US</button>
             </Text>
         </div>
     
@@ -118,5 +128,6 @@ const About = () => {
    
   )
 }
+
 
 export default About

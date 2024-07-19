@@ -22,25 +22,27 @@ const Nav = () => {
         <div className="triangle"></div>
         <nav className='bg-[#D81220] w-[70%]  h-[100%] my-auto navbar-container sm:hidden'>
             <ul className='flex justify-between px-20 '>
-                <li className='navbar-link'>
+                <li className='navbar-link py-2 cursor-pointer'>
                 <Link to="/" className='text-white text-lg '>Home</Link>
                 <span className='w-[20px] h-[6px] rounded-xl under-bar bg-black' />
                 </li>
-                <li className='navbar-link'>
-                    <Link to="/about" className='text-white text-lg '>Our Story</Link>
+                <li className='navbar-link py-2 cursor-pointer'>
+                    <Link to="/about" className='text-white text-lg '>About Us</Link>
                     <span className='w-[20px] h-[6px] rounded-xl under-bar bg-black' />
                 </li>
-                <li className='navbar-link'>
-                    <Link to={"/projects"} className='text-white text-lg '>Projects</Link>
+                <li className='navbar-link py-2 cursor-pointer'>
+                    <Link to={"/projects"} className='text-white text-lg '>Our Services</Link>
                     <span className='w-[20px] h-[6px] rounded-xl under-bar bg-black' />
                 </li>
-                <li className='navbar-link'>
-                    <Link to={"/profile"} className='text-white text-lg '>Our Profile</Link>
-                    <span className='w-[20px] h-[6px] rounded-xl under-bar bg-black' />
-                </li>
-                <li className='navbar-link'>
+               
+                <li className='navbar-link py-2 cursor-pointer'>
                     <Link to="/contact" className='text-white text-lg '>Contact Us</Link>
                     <span className='w-[20px] h-[6px] rounded-xl under-bar bg-black' />
+                </li>
+                <li className='bg-white cursor-pointer py-2 px-2 rounded-sm'>
+                <Link to="/request-quote">
+              Request Route
+            </Link>
                 </li>
 
             </ul>
@@ -80,14 +82,10 @@ const Nav = () => {
            
             <li>
               <Link to="/projects" className="font-medium">
-                Projects
+                Service
               </Link>
             </li>
-            <li>
-              <Link to="/profile" className="font-medium">
-                Profile
-              </Link>
-            </li>
+            
 
             <Link to="/contact">
               <button className="bg-[#d81220] text-white w-full mt-[80px] rounded-md py-4 px-10">

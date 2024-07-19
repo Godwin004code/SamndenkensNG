@@ -2,10 +2,10 @@
 import React, { useState } from 'react'
 import SlidesArrow from './SlidesArrow'
 import SlidesDot from './SlidesDot'
-import OilWell from "../../images/Oil-and-Gas-industry.jpeg"
-import img1 from "../../images/41.png"
-import img2 from "../../images/42.png"
-import img3 from "../../images/Email Plan (2) (1).png"
+import OilWell from "../../images/oil-wells.jpeg"
+import img1 from "../../images/41.webp"
+import img2 from "../../images/42 (1) (1) (1) (1).webp"
+import img3 from "../../images/Email Plan (2) (2).webp"
 import Typical from 'react-typical'
 import { motion } from 'framer-motion';
 //import './SliderContainer.css'
@@ -99,7 +99,7 @@ const SlidesContainer = () => {
           backgroundPosition: "center",
           backgroundSize: "cover",}}>
                 <img src={img} alt="image" className='w-full z-10 h-[100%] object-cover' />
-                <div className='absolute top-0 bottom-0'>
+                <div className='absolute bg-[#d812204d] top-0 bottom-0'>
                 <div className="header w-[50%] sm:w-[90%] sm:pl-4  h-full  pl-24 justify-center flex flex-col">
                 <motion.h2 variants={childVariants} className='text-white outlined-text leading-[80px] sm:leading-[40px] mt-[-20px]'>{title}</motion.h2>
                 <motion.p variants={childVariants} className='text-white  text-xl sm:text-sm leading-[25px] mt-5 w-[100%]' >{description}</motion.p>
