@@ -1,6 +1,7 @@
 import React from 'react'
 
 const ContactForm = () => {
+  const pathname = window.location.pathname;
   return (
     <div className='mt-40'>
         <h2 className='text-[#d81220] font-medium text-2xl sm:text-base text-center'>GET IN TOUCH</h2>
@@ -20,8 +21,7 @@ shortly. We look forward to connecting with you!
   <input type="number"  className='w-[45%] md:w-[100%] h-[60px] pl-6 rounded-[10px] focus:outline-none' placeholder='Phone Number' />
 </div>
 <div className='w-full flex justify-between mb-12 sm:mb-[16px]'>
- 
-  <select className='category-select pl-6 w-full h-[60px] rounded-[10px] pr-6 bg-[#FFFFFF] focus:outline-none' name="category" id="category">
+ {pathname === "/request-quote" ? <select className='category-select pl-6 w-full h-[60px] rounded-[10px] pr-6 bg-[#FFFFFF] focus:outline-none' name="category" id="category">
   <option value="Select an option" className='pl-6'>Select an option</option>
     <option value="Waste Management / Environmental and Sustainability" className='pl-6'>Waste Management / Environmental and Sustainability</option>
     <option value="Procurement and Equipment Supplies">Procurement and Equipment Supplies</option>
@@ -30,7 +30,24 @@ shortly. We look forward to connecting with you!
     <option value="Trainings/Manpower supply">Trainings/Manpower supply</option>
     <option value="Marine Logistics">Marine Logistics</option>
     <option value="Brand communications, Compliance Certification & New media marketing">Brand communications, Compliance Certification & New media marketing</option>
-  </select>
+  </select>    :   <select className='category-select pl-6 w-full h-[60px] rounded-[10px] pr-6 bg-[#FFFFFF] focus:outline-none' name="category" id="category">
+  <option value="Select an option" className='pl-6'>Select an option</option>
+    <option value="General Inquiries" className='pl-6'>General Inquiries</option>
+    <option value=" Request Quote">Request Quote</option>
+    <option value="Partnership Opportunities">Partnership Opportunities</option>
+    <option value="Careers">Careers</option>
+    <option value="Customer Support">Customer Support</option>
+    <option value="Marine Logistics">Marine Logistics</option>
+    <option value="Media & Press Inquiries">Media & Press Inquiries</option>
+    <option value="Investor Relations">Investor Relations</option>
+    <option value="Feedback & Suggestions">Feedback & Suggestions</option>
+    <option value="Regulatory & Compliance">Regulatory & Compliance</option>
+    <option value="Technical Support">Technical Support</option>
+    <option value="Supplier Inquiries">Supplier Inquiries</option>
+  </select> }
+
+
+
 </div>
 <div>
   <textarea className='w-full pl-6 pt-5 pb-32 rounded-[10px] focus:outline-none' placeholder='Your Text'></textarea>

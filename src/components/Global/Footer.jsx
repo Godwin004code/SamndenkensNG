@@ -56,7 +56,7 @@ const Footer = () => {
             <Link to="/partners" className='underline text-base'>Partners</Link>
         </li>
         <li className='mb-7'>
-            <Link to="/" className='underline text-base'>Careers</Link>
+            <Link to="/career" className='underline text-base'>Careers</Link>
         </li>
         <li className='mb-5'>
             <Link to="/" className='underline text-base'>FAQ</Link>
@@ -96,19 +96,17 @@ const Footer = () => {
 <div className='sm:text-center sm:py-10'>
     <h2 className='text-[#d81220] font-semibold text-2xl mb-4'>Address</h2>
     <p>
-    88B Old Donovan Street, Faroe.
+    5a Benita Close Eliozu 
     </p>
-    <p>
-    Mulliner Tower, 39, JG Creative Studio building
-    </p>
-    <p>Road, Ikoyi, Lagos.</p>
+    <p>Port-Harcourt.</p>
+  
    
 </div>
 <div className='sm:text-center'>
     <h2 className='text-[#d81220] font-semibold text-2xl mb-4'>Need help</h2>
     <h2 className=' sm:text-lg'>Reach out to us : </h2>
     <p className='sm:mb-8 sm:text-lg'>
-   <Link to="" className='underline'> contact@samdenkens.ng</Link>
+   <Link to="" className='underline'>info@samdenkensng.com</Link>
     </p>
 </div>
         </section>
@@ -132,6 +130,9 @@ const Footer = () => {
             </div>
            </div>
            
+        </div>
+        <div className='bg-[#d81220] w-full py-3'>
+<h2 className='text-center text-white font-medium'>Powered by <Link className='underline' to="https://jgcreative.tech">JG Creative Studio</Link> </h2>
         </div>
     </div>
   )

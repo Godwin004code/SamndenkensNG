@@ -15,7 +15,7 @@ const ProfileHero = () => {
     loop={Infinity}
    
   /></h2>
-<p className='text-white sm:text-sm text-xl leading-[25px] mt-5 w-[100%]' >Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
+<p className='text-white sm:text-sm text-xl leading-[25px] mt-5 w-[100%]' >We offer a broad range of services for the oil and gas industry, including waste management, EPIC services (engineering, procurement, installation, and construction), and electrical and instrumentation expertise.</p>
 <button className='bg-[#d81220] text-white px-4 py-4 mt-10 explore-product-btn  max-w-[200px]'>EXPLORE PRODUCT</button>
 </div>
 

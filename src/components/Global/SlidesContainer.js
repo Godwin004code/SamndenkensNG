@@ -8,26 +8,33 @@ import img2 from "../../images/42 (1) (1) (1) (1).webp"
 import img3 from "../../images/Email Plan (2) (2).webp"
 import Typical from 'react-typical'
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom'
 //import './SliderContainer.css'
 
 
 const SlidesContainer = () => {
     const Data = [
         {
-            title: "Lorem Ipsum sit dolor amet tsibilisi",
-            description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+            title: "Innovative Procurement",
+            description: "SMART BUYER",
             img: img1
         },
         {
-            title: "Lorem Ipsum sit dolor amet tsibilisi2",
-            description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+            title: "SEAMLESS CONSTRUCTION AND ENGINEERING",
+            description: "TRONIC SOLUTIONS",
             img: img2
         },
         {
-            title: "Lorem Ipsum sit dolor amet tsibilisi3",
-            description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
-            img: img3
-        }
+            title: "SUSTAINABLE WASTE MANAGEMENT SOLUTIONS",
+            description: "REFUSE, REDUCE, REUSE, REPURPOSE AND RECYCLE",
+            img: "https://vacranerental.com/wp-content/uploads/2020/05/shutterstock_257689849.jpg"
+        },
+        {
+            title: "COMPREHENSIVE INDUSTRY SOLUTIONS",
+            description: "PEOPLES; OPERATIONS, ASSETS INTEGRITY, SAFETY",
+            img: "https://www.yontemakademi.com.tr/media/service/cover/periyodik-muayene-ve-kontroller.jpg"
+        },
+        
     ]
 
     const containerVariants = {
@@ -87,7 +94,7 @@ const SlidesContainer = () => {
         })
     }
 
-
+// outlined-text
     return (
         
 
@@ -99,11 +106,13 @@ const SlidesContainer = () => {
           backgroundPosition: "center",
           backgroundSize: "cover",}}>
                 <img src={img} alt="image" className='w-full z-10 h-[100%] object-cover' />
-                <div className='absolute bg-[#d812204d] top-0 bottom-0'>
-                <div className="header w-[50%] sm:w-[90%] sm:pl-4  h-full  pl-24 justify-center flex flex-col">
-                <motion.h2 variants={childVariants} className='text-white outlined-text leading-[80px] sm:leading-[40px] mt-[-20px]'>{title}</motion.h2>
-                <motion.p variants={childVariants} className='text-white  text-xl sm:text-sm leading-[25px] mt-5 w-[100%]' >{description}</motion.p>
-                <motion.button variants={buttonVariants} className='bg-[#d81220] text-white px-4 py-4 mt-10 explore-product-btn  max-w-[200px]'>EXPLORE PRODUCT</motion.button>
+                <div className='absolute top-0 right-0 left-0 bg-[#000000b3] bottom-0'>
+                <div className="header w-[80%] sm:w-[90%] sm:pl-4  h-full  pl-24 justify-center flex flex-col">
+                <motion.h2 variants={childVariants} className='text-white uppercase outlined-text leading-[80px] xs:leading-[40px] sm:leading-[70px] sm:mt-10 mt-[-20px]'>{title}</motion.h2>
+                <motion.p variants={childVariants} className='text-white capitalize  text-xl sm:text-sm leading-[25px] mt-5 w-[100%]' >{description}</motion.p>
+                <Link to="/projects">
+                <motion.button variants={buttonVariants} className='bg-[#d81220] text-white px-4 py-4 mt-10 explore-product-btn  max-w-[200px]'>EXPLORE SERVICE</motion.button>
+                </Link>
                 <SlidesDot data={Data}  active={active} />
             </div>
                 </div>

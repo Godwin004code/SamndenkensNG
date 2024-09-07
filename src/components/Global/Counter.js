@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-const Counter = ({ end, icon }) => {
+const Counter = ({ end, icon,currency }) => {
   const [count, setCount] = useState(0);
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -32,7 +32,7 @@ const Counter = ({ end, icon }) => {
 
   return (
     <h2 ref={ref} className="counter text-[#d81220]">
-      {count}{icon}
+     {currency}{count}{icon}
     </h2>
   );
 };

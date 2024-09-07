@@ -4,7 +4,7 @@ import Typical from 'react-typical'
 
 const ProjectHero = () => {
   return (
-    <div className='h-[50vh]'>
+    <div className='h-[500px]'>
     <div className='h-full relative'>
 <img src={img} alt="about us" className='h-[100%] w-full' />
 <div className='bg-[#000000b3] absolute w-full h-full top-0 flex flex-col justify-center bottom-0'>
@@ -15,8 +15,8 @@ const ProjectHero = () => {
     loop={Infinity}
    
   /></h2>
-<p className='text-white sm:text-sm  text-xl leading-[25px] mt-5 w-[100%]' >Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
-<button className='bg-[#d81220] text-white px-4 py-4 mt-10 explore-product-btn  max-w-[200px]'>EXPLORE PRODUCT</button>
+<p className='text-white sm:text-sm  text-xl leading-[25px] mt-5 w-[100%]' >FAST DELIVERY.  UNMATCHED PERFORMANCE. QUALITY PRODUCT.</p>
+<button className='bg-[#d81220] hidden text-white px-4 py-4 mt-10 explore-product-btn  max-w-[200px]'>EXPLORE PRODUCT</button>
 </div>
 
 </div>

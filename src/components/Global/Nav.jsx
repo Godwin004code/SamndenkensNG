@@ -39,11 +39,12 @@ const Nav = () => {
                     <Link to="/contact" className='text-white text-lg '>Contact Us</Link>
                     <span className='w-[20px] h-[6px] rounded-xl under-bar bg-black' />
                 </li>
-                <li className='bg-white cursor-pointer py-2 px-2 rounded-sm'>
                 <Link to="/request-quote">
-              Request Route
-            </Link>
-                </li>
+                <li className='bg-white cursor-pointer py-2 px-2 rounded-sm'>
+              
+              Request Qoute
+           
+                </li> </Link>
 
             </ul>
         </nav>
@@ -76,13 +77,13 @@ const Nav = () => {
             </li>
             <li>
               <Link to="/about" className="font-medium">
-                Our Story
+                About Us
               </Link>
             </li>
            
             <li>
               <Link to="/projects" className="font-medium">
-                Service
+                Our Services
               </Link>
             </li>
             

@@ -125,9 +125,72 @@ margin-top: 40px;
   border-right: 1px solid black;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 960px) {
   .jg-border-right {
     border-right: 0;
   border-bottom: 1px solid black;
+  }
+}
+
+
+
+.announcement-toolbar {
+  width: 100%;
+  background-color: #d81220;
+  overflow: hidden;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.announcement-text {
+  display: inline-block;
+  padding-left: 30%;
+  animation: move-text 10s linear infinite;
+  color: white;
+}
+
+@keyframes move-text {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+.slider-container {
+  width: 100%; /* Full width of the slider */
+  overflow: hidden; /* Hide overflowing images */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  animation: scrollLeft 8s linear infinite; /* Scroll from right to left */
+}
+
+.slider-image {
+  width: 150px; /* Adjust the width as necessary */
+  margin-right: 20px; /* Space between images */
+  object-fit: contain; /* Ensure images fit */
+}
+
+/* Keyframes for moving images from right to left */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%); /* Start from fully off-screen on the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move fully off-screen to the left */
   }
 }

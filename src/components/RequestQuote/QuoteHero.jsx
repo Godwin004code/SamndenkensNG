@@ -15,7 +15,7 @@ const QuoteHero = () => {
     loop={Infinity}
    
   /></h2>
-<p className='text-white sm:text-sm  text-xl leading-[25px] mt-5 w-[100%]' >Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
+<p className='text-white sm:text-sm  text-xl leading-[25px] mt-5 w-[100%]'></p>
 
 </div>
 

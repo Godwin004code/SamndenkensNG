@@ -58,11 +58,11 @@ body {
 }
 
 .outlined-text {
-    font-size: 80px; /* Adjust the font size as needed */
-    color: transparent; /* Make the text itself transparent */
-    background-color: transparent; /* Make the background transparent */
-    -webkit-text-stroke: 2px white; /* Apply the white border */
-    position: relative;
+    font-size: 60px; /* Adjust the font size as needed */
+    color: white; /* Make the text itself transparent */
+    /* background-color: transparent; /* Make the background transparent */
+     /* Apply the white border position: relative; -webkit-text-stroke: 2px white;  */
+    font-weight: 600;
     
 }
 

@@ -6,7 +6,7 @@ import exportedData from '../Global/AccordionData';
 const AccordionItem = ({ question, answer, isOpen, onClick }) => {
     const contentHeight = useRef();
     return (
-      <div className="wrapper">
+      <div className="wrapper hidden">
         <button
           className={`question-container  ${isOpen ? "active" : ""}`}
           onClick={onClick}

@@ -7,11 +7,14 @@ import ContactPage from './components/contact/ContactPage';
 import ProjectPage from './components/Projects/ProjectPage';
 import ProfilePage from './components/Profile/ProfilePage';
 import RequestQuote from './components/RequestQuote/RequestQuote';
+import ScrollToTop from './components/Global/ScrollToTop';
+import CareerPage from './components/Career/CareerPage';
 
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
     <Routes>
       <Route path='/' exact element={<Home />} />
       <Route path='/about' element={<AboutPage />} />
@@ -19,6 +22,7 @@ function App() {
       <Route path='/projects' element={<ProjectPage />} />
       <Route path='/profile' element={<ProfilePage />} />
       <Route path='/request-quote' element={<RequestQuote />} />
+      <Route path='/career' element={<CareerPage />} />
     </Routes>
     </BrowserRouter>
   );
