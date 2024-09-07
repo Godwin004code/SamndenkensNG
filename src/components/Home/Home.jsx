@@ -11,6 +11,7 @@ import ContactForm from '../Global/ContactForm'
 import AnnouncementToolbar from '../Global/AnnouncementToolbar'
 import PartnerSlider from './PartnerSlider'
 import Events from './Events'
+import HomeService from './HomeService'
 
 const Home = () => {
   return (
@@ -32,7 +33,7 @@ const Home = () => {
       </p>
     </section>
     <About />
-    <Featured />
+<HomeService />
     <h2 className='uppercase text-center text-[#d81220] mt-20 text-xl font-semibold mb-4'>Our Partners</h2>
     <PartnerSlider />
     <Trusted />

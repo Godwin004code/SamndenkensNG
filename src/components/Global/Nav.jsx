@@ -31,7 +31,7 @@ const Nav = () => {
                     <span className='w-[20px] h-[6px] rounded-xl under-bar bg-black' />
                 </li>
                 <li className='navbar-link py-2 cursor-pointer'>
-                    <Link to={"/projects"} className='text-white text-lg '>Our Services</Link>
+                    <Link to={"/service"} className='text-white text-lg '>Our Services</Link>
                     <span className='w-[20px] h-[6px] rounded-xl under-bar bg-black' />
                 </li>
                
@@ -82,7 +82,7 @@ const Nav = () => {
             </li>
            
             <li>
-              <Link to="/projects" className="font-medium">
+              <Link to="/service" className="font-medium">
                 Our Services
               </Link>
             </li>
