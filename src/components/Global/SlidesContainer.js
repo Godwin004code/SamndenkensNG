@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import SlidesArrow from './SlidesArrow'
 import SlidesDot from './SlidesDot'
-import OilWell from "../../images/oil-wells.jpeg"
 import img1 from "../../images/41.webp"
 import img2 from "../../images/42 (1) (1) (1) (1).webp"
 import img3 from "../../images/WhatsApp_x20Image_x202024_x2D09_x2D11_x20at_x2021.51.20_709f808f.jpg"
