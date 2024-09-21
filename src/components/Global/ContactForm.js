@@ -6,7 +6,7 @@ const ContactForm = () => {
     <div className='mt-40'>
         <h2 className='text-[#d81220] font-medium text-2xl sm:text-base text-center'>GET IN TOUCH</h2>
       <p className='font-medium text-3xl sm:text-2xl sm:w-[90%] sm:mx-auto text-black text-center'>Let's Start a Conversation!</p>
-      <p className='font-medium text-lg sm:text-base w-[70%] sm:w-[90%] text-center mx-auto mt-6 mb-10 sm:mb-10'>
+      <p className='font-light text-lg sm:text-base w-[70%] sm:w-[90%] text-center mx-auto mt-6 mb-10 sm:mb-10'>
       Have questions or want to learn more about our services?
 Fill out the form below, and our team will reach out to you
 shortly. We look forward to connecting with you!

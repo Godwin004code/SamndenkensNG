@@ -7,7 +7,7 @@ const Events = () => {
                 <h2 className='text-[#1D2130] font-medium text-4xl'>Our Events</h2>
                 <div className='flex-1 my-auto h-[2px]  ml-5 bg-[#E5E5E5]'></div>
             </div>
-            <section className='mt-10 flex  sm:flex-col gap-10'>
+            <section className='mt-10 flex hidden  sm:flex-col gap-10'>
                 <div className='p-8 flex w-full gap-3 rounded-[20px]' style={{ border: "1px solid #E5E5E5" }}>
                     <div>
                         <h2 className='text-4xl'>30</h2>

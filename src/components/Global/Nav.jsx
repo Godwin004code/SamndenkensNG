@@ -56,7 +56,7 @@ const Nav = () => {
             mobileShown
               ? "left-[0%] pointer-events-auto"
               : "left-[100%] pointer-events-none"
-          } fixed bg-white h-full w-full z-[100] overflow-auto left-0 top-0 text-black duration-500 ease-in-out`}
+          } fixed bg-white h-full w-full z-[100] overflow-auto left-0 top-0 pt-2 text-black duration-500 ease-in-out`}
         >
           {/* Container for logo and cross button */}
           <div className="w-[90%] mx-auto py-10 mb-[40px] flex justify-between">
@@ -89,7 +89,7 @@ const Nav = () => {
             
 
             <Link to="/contact">
-              <button className="bg-[#d81220] text-white w-full mt-[80px] rounded-md py-4 px-10">
+              <button className="bg-[#d81220] text-white w-full mt-[10px] rounded-md py-4 px-10">
                 Contact Us
               </button>
             </Link>

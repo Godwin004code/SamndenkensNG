@@ -17,15 +17,15 @@ const AboutPage = () => {
     <AboutHero />
     <section className='w-[60%] sm:w-[80%] xs:w-[90%] my-20 mx-auto'>
       <h2 className='text-center text-4xl font-medium'>About Samdenkens Nig Ltd</h2>
-      <p className='text-center mt-4'>
+      <p className='text-center mt-4 font-light'>
      
       Welcome to Samdenkens Nig Ltd, a pioneering force in the energy sector, dedicated to transforming energy services for a sustainable future. Established in 2014, Samdenkens has quickly become a leader in the industry, built on the pillars of safety, innovation, and integrity. We are committed to delivering state-of-the-art solutions that meet the complex demands of the global energy market.
       </p>
     </section>
     <section className='w-[60%] sm:w-[80%] xs:w-[90%] my-20 mx-auto'>
       <h2 className='text-center text-4xl font-medium'>Our Vision</h2>
-      <p className='text-center mt-4'>
-      At Samdenkens, our vision is clear:<b> Safely Redefining Energy Services Globally with Excellence, Integrity, and Unrivaled Innovative Expertise.</b> This vision fuels our continuous innovation and drives us to set new benchmarks in the industry.
+      <p className='text-center mt-4 font-light'>
+      Safely Redefining Global Energy Services with excellence, Integrity and  unrival innovative expertise.
       </p>
     </section>
     <StrongSide />
@@ -37,7 +37,7 @@ const AboutPage = () => {
   </div>
   <div className='my-auto w-[50%] px-20 sm:w-full sm:mt-5 sm:px-0'>
     <h2 className='font-medium text-2xl'>Join Us on Our Journey</h2>
-    <p className='mt-4'>
+    <p className='mt-4 font-light'>
     Whether you are a potential client, partner, or future team member, we invite you to join us in our mission to redefine energy services for a safer, more sustainable world. Together, we can create an energy landscape that is accessible, reliable, and environmentally responsible.
     </p>
   </div>
