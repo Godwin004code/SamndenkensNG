@@ -28,6 +28,7 @@ const event = [
     
 ]
 
+
 const EventSlider = () => {
   return (
     <div className="slider-container mt-10">

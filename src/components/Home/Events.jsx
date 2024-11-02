@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Events = () => {
     return (
         <section className='mt-20 w-[90%] mx-auto'>

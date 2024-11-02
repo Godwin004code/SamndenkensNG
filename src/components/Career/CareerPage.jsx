@@ -1,9 +1,84 @@
-import React from 'react'
+import React, {useState, useRef} from 'react'
 import Nav from '../Global/Nav'
 import Footer from '../Global/Footer'
 import CareerPageHero from './CareerPageHero'
+import emailjs from "@emailjs/browser"
+import Swal from "sweetalert2"
 
 const CareerPage = () => {
+  
+
+
+
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [option, setOption] = useState("");
+  const [file, setFile] = useState("");
+
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+
+  const form = useRef()
+
+  const emailHandler = (e) => {
+      setEmail(e.target.value);
+    };
+    const fileHandler = (e) => {
+      setFile(e.target.value);
+    };
+    const fnameHandler = (e) => {
+      setFname(e.target.value);
+    };
+    const lnameHandler = (e) => {
+      setLname(e.target.value);
+    };
+    const optionHandler = (e) => {
+      setOption(e.target.value);
+    };
+    
+    
+
+    const submitHandler = (e) => {
+      e.preventDefault();
+  
+      if (email === "" || file === "") {
+        Swal.fire({
+          title: "Fields must not be empty",
+          icon: "warning",
+        });
+  
+        return;
+      } else {
+        console.log(form.current)
+
+        emailjs
+          .sendForm(
+            "Careerssdkweb",
+            "template_g1dtdea",
+            form.current,
+            "BuvitiFjOJm42snag"
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+              Swal.fire({
+                title: "We have received your application, Thank You! We will get back to you as soon as possible.",
+                icon: "success",
+              });
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          );
+        setEmail("");
+        setFile("");
+        setFname("");
+        setLname("")
+        setOption("")
+        
+      }
+    };
   return (
     <>
     <Nav />
@@ -33,14 +108,18 @@ Are you enthusiastic, team-oriented, and have some experience in a corporate env
 We’re excited to offer you the opportunity to start your journey with us.</p>
 <p className='mt-4'><i>Currently, we are hiring.</i> <span>Apply below</span></p>
 </section>
-<form className='bg-[#F4E6E7] w-[80%] sm:w-[90%] mx-auto py-16 sm:py-10 px-14 sm:px-3 mt-0 mb-28'>
+<form enctype="multipart/form-data" ref={form} className='bg-[#F4E6E7] w-[80%] sm:w-[90%] mx-auto py-16 sm:py-10 px-14 sm:px-3 mt-0 mb-28'>
 <div className='w-full flex gap-4 md:flex-col justify-between mb-8 sm:mb-[16px]'>
-  <input type="text" className='w-[45%] md:w-[100%] h-[60px] pl-6 rounded-[10px] focus:outline-none' placeholder='First Name' />
-  <input type="text"  className='w-[45%] md:w-[100%] h-[60px] pl-6 rounded-[10px] focus:outline-none' placeholder='Last Name' />
+  <input name="fname"  value={fname}
+                onChange={fnameHandler} type="text" className='w-[45%] md:w-[100%] h-[60px] pl-6 rounded-[10px] focus:outline-none' placeholder='First Name' />
+  <input name="lname"  value={lname}
+                onChange={lnameHandler} type="text"  className='w-[45%] md:w-[100%] h-[60px] pl-6 rounded-[10px] focus:outline-none' placeholder='Last Name' />
 </div>
 <div className='w-full flex gap-4 md:flex-col justify-between sm:mb-[16px] mb-8'>
-  <input type="email" className='w-[45%] md:w-[100%] h-[60px] pl-6 rounded-[10px] focus:outline-none' placeholder='Email' />
-  <select className='category-select pl-6 w-[45%] sm:w-full h-[60px] rounded-[10px] pr-6 bg-[#FFFFFF] focus:outline-none' name="category" id="category">
+  <input name="email"  value={email}
+                onChange={emailHandler} type="email" className='w-[45%] md:w-[100%] h-[60px] pl-6 rounded-[10px] focus:outline-none' placeholder='Email' />
+  <select name="option" value={option}
+                onChange={optionHandler} className='category-select pl-6 w-[45%] sm:w-full h-[60px] rounded-[10px] pr-6 bg-[#FFFFFF] focus:outline-none'  id="category">
   <option value="Select an option" className='pl-6'>Select an option</option>
     <option value="Middle Management role" className='pl-6'>Middle Management role</option>
     <option value="Entry-level role">Entry-level role</option>
@@ -49,10 +128,11 @@ We’re excited to offer you the opportunity to start your journey with us.</p>
 </div>
 <div className='w-full'>
     <h2 className='mb-2 text-lg font-medium'>Upload CV</h2> 
-    <input className='w-full' type="file" name="cv" id="cv" />
+    <input name="file" value={file}
+                onChange={fileHandler} className='w-full' type="file"  id="cv" />
 </div>
 
-<button className='bg-[#d81220] hover:bg-[#b40f1b] rounded-[10px] text-white w-full h-[80px] mt-12 sm:mt-[22px]'>Submit</button>
+<button onClick={submitHandler} className='bg-[#d81220] hover:bg-[#b40f1b] rounded-[10px] text-white w-full h-[80px] mt-12 sm:mt-[22px]'>Submit</button>
 </form>
     <Footer />
     </>
